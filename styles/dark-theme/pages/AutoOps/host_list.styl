@@ -1,0 +1,53 @@
+// src\pages\AutoOps_HostList\Index.vue
+#hostListCtn
+  .s-tree-node-content
+    &:hover
+      .treeNodeToolBar
+        color: link_text
+  .treeTab
+    border-bottom 1px solid original_l2_black
+    .title
+      color title_2
+      border-bottom 3px solid original_color
+    .treeToolBar
+      i.iconfont
+        color hover_text
+  .s-tree-node.is-current
+    background-color block_bg
+    > .s-tree-node-content .treeNodeLabel
+      color theme_iconcolor !important
+
+// src\pages\AutoOps_HostList\HostList.vue
+#hostList
+  #hostListTable
+    .link
+      color link_text
+      &:hover
+        color hover_text
+
+// src\pages\AutoOps_HostList\HostDetail.vue
+#hostDetail
+  .title-txt
+    border-bottom 1px solid original_l2_black
+
+// src\pages\AutoOps_HostList\ScriptExecute.vue
+#scriptExecute
+  .exeDetail
+    .icon-host-ctn
+      .iconfont
+        color: #fff
+        opacity: 0.65
+    .scriptContent
+      border 1px solid gray_l3_black
+    div.moreResult
+      color link_text
+      &:hover
+        color hover_text
+
+// src\pages\AutoOps_HostList\ScriptExeHistory.vue
+#scriptExeHistory
+  #historyListTable
+    div.moreResult
+      color link_text
+      &:hover
+        color hover_text

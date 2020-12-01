@@ -1,0 +1,274 @@
+.recentEventItem
+  font-size: 12px
+  .specialBtn
+    position: absolute;
+    right: 1px;
+    top: 16px;
+  .s-row
+    margin-bottom: 0
+  .title, .time-title
+    display: inline-block
+    line-height: 18px
+    padding: 0 5px
+    color rgba(0, 0, 0, 0.65)
+    margin-bottom 10px
+    font-size: 14px;
+  .time-title
+    float right
+  .detail
+    width: 100%
+    &.default
+      background rgba(blue_l3_black,0.01)
+      color gray_l1_text
+      border: 1px solid rgba(border_color, 0.3)
+      .s-col
+        overflow hidden
+        line-height 26px
+        .client
+          height: 20px
+          line-height 20px
+          color link_text
+          padding-left: 2px
+          padding-right: 2px
+          background gray_l3_text
+          border-radius 2px
+        .s-button
+          padding 3px 5px
+          float: 18px
+    &.current
+      line-height 28px
+      background block_bg
+      position: relative
+      .s-button
+        padding 3px 5px
+        float: right
+        margin-top 15px
+      .s-row
+        color: theme_fontcolor45
+        font-size: 12px
+      img
+        margin-top 8px
+  .currentValue
+    color: gray_l1_text
+
+#event-timeline
+  & .ss-timeline-item-head
+    width: 8px;
+    height: 8px;
+  & .recentEventItem
+    margin-left: 3px
+
+.opterationScrollHeight
+  height calc(100vh - 452px)
+  & .s-card
+    margin-top 1.5px
+
+.operational-equip-wrapper
+  .s-carousel
+    overflow hidden
+  .is-active
+    border none
+    box-shadow none
+  .operational-equip
+    margin-top 15px
+    .operational-equip-item
+      box-sizing border-box
+      height 100px
+      background-color #FFFFFF
+      margin 6px 0
+      border-radius 2px
+    .equip-item
+      height 100%
+      //border 1px solid border_color
+      .s-col
+        height 100%
+      .s-col:nth-child(1)
+        padding 0 0 0 14px
+      .s-col:nth-child(2)
+        //border-left 1px solid border_color
+        //background-color rgba(blue_color,0.3)
+      .greenWord, .redWord, .yellowWord
+        font-size 14px
+      .greenWord
+        color green_color
+      .redWord
+        color red_color
+      .yellowWord
+        color yellow_color
+      .contentWord
+        color lightWordColor
+        height 18px
+        line-height 18px
+      .specialChunk
+        font-size 12px
+        width 45%
+        background-color #aaccff
+        padding 1px 0
+        padding-left 5px
+        border-radius 2px
+        white-space: nowrap;
+        text-overflow: ellipsis;
+        overflow: hidden;
+        color #FFF
+      .equip-item-tit
+        span
+          display block
+          line-height 20px
+          height 20px
+          &:first-child
+            float left
+        .firstWord
+          width auto
+          font-size 14px
+          white-space nowrap
+          text-overflow ellipsis
+          overflow hidden
+
+.new-apply-btn
+  padding 6px 2px
+  .s-button
+    width 100%
+
+.client-download
+  padding 5px 2px
+  margin-top 5px
+  .s-col
+    ul li
+      padding-left 6px
+      padding-top 1px
+      color title_2
+      height 30px
+      line-height 30px
+      background-color #fff6ee
+      border 1px solid #ffa954
+      border-radius 2px
+      font-size 14px
+      cursor pointer
+      text-align center
+      &:hover
+        background original_color
+        border-color original_l2_white
+      & div
+        float left
+  .icontool
+    width 16px
+    height 16px
+    margin: 7px 3px 0 0
+  .win
+    background url(../../assets/images/Windows.png) no-repeat
+    background-size 16px
+  .mac
+    background url(../../assets/images/ios.png) no-repeat
+    background-size 16px
+  .linux
+    background url(../../assets/images/Linux.png) no-repeat
+    background-size 16px
+
+.special-order
+  height 30px
+  line-height 30px
+  box-sizing border-box
+  //border 1px solid rgba(border_color,0.2)
+  padding 0 5px
+  margin 5px 2px
+  font-size 14px
+  color darkWordColor
+  background-color block_bg
+  & i
+    position: relative;
+    top: 1px;
+  .oper-title
+    color gray_l2_text
+  .orangeWord
+    color orangeWordColor
+  .greenWord
+    color greenWordColor
+
+.operateLogItem
+  .status
+    color: theme_iconcolor
+    background: #FFF7EF;
+    border: 1px solid theme_iconcolor;
+    box-sizing: border-box;
+    border-radius: 2px;
+
+/*运维中心首页*/
+.oper-box
+  width 100%
+  margin 0 auto
+  .oper-search-input
+    .s-input-inner
+      color rgba(0,0,0,.45)
+      background #F5F7FA
+  .s-card-header
+    padding-right 16px
+    border-bottom none
+  .orangeWord
+    color #199FED
+  .oper-footer
+    padding 0 20px
+    height 200px
+  .main-right
+    .right-card
+      .s-card-header
+        background-color #fff
+    .sper-card
+      height: 100px
+      .s-card-header
+        border-bottom: none
+      .s-card-body
+        background-color #fff
+        line-height 60px
+    .sper-card-border
+      border-bottom  1px solid #DCDEE2
+  .oper-card
+    .s-card-header
+      padding 0 20px
+      border-bottom: 1px solid #DCDEE2
+    .s-card-body
+      padding 0 20px
+  .card-height
+    height 200px
+    .s-card-header
+      border: 1px solid #DCDEE2
+      border-bottom: none!important
+    .s-card-body
+      height: calc(100% - 42px)
+      box-sizing: border-box
+      border 1px solid #DCDEE2
+  .operateLogItem
+    height 50px
+    margin-top 10px
+    .oper-img
+      height 50px
+      line-height 45px
+      img
+        vertical-align middle
+    .oper-details
+      line-height 23px
+      .ip
+        color theme_fontcolor85
+      .info
+        color theme_fontcolor65
+    .status
+      font-size 12px
+      padding: 2px 5px
+  .operational-equip-item
+    border: 1px solid #DCDEE2;
+    .oper-icon
+      color #199FED
+  .operational-equip-item:hover
+    background-color #F8F9F9
+
+/*最新通知*/
+.latest-notice
+  .latest-notice-item
+    .recent-row
+      .left-message
+        p
+          color theme_fontcolor65
+          .date
+            color theme_fontcolor45
+      .right-message
+        .notice-title
+          background #FFF7EF

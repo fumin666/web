@@ -1,0 +1,279 @@
+.s-timeline
+  list-style none
+  margin 0
+
+  .timeline-date
+    color: #667480
+    position: relative
+    line-height: 1.5
+
+  .s-timeline-item
+    padding 0 0 5px 0
+    list-style none
+    position relative
+
+  &.twoway
+    &:after
+      content ""
+      height 100%
+      width: 3px
+      background: linear-gradient(180deg, rgba(245, 247, 250, 0) 0%, rgba(243, 245, 248, 0.968916) 3.11%, rgba(196, 196, 196, 0) 100%)
+      position absolute
+      left 50%
+      margin-left 0px
+      top 5px
+
+    .s-timeline-item
+      .s-timeline-item-head
+        width 7px
+        height 7px
+        position absolute
+        border-radius: 50%
+        background-color theme_iconcolor
+        left 50%
+        top 30px
+        z-index 10
+        margin-left -3.5px
+        box-sizing border-box
+
+      .s-timeline-item-content
+        display: inline-block
+        width: 48%
+        position absolute
+        //border: 1px solid #20a7f8
+        background: #ffffff
+        border 1px solid #DCDEE2
+        border-radius: 4px
+        font-size 12px
+        box-sizing: border-box
+        padding: 12px 20px
+
+        &:before, &:after
+          content: ''
+          position: absolute
+          width: 0
+          height: 0
+
+      &:nth-child(2n+1)
+        height: 16px
+        margin-left 2px
+        .s-timeline-item-content
+          right: 50%
+          margin-right: 20px
+          top: 8px
+          transform: translateY(0%)
+
+          &:before
+            top: 25px
+            right: -8px
+            margin-top: -8px
+            border-left: 8px solid #DCDEE2
+            border-bottom: 8px solid transparent
+            border-top: 8px solid transparent
+
+          &:after
+            top: 25px
+            right: -6px
+            margin-top: -7px
+            border-left: 7px solid #ffffff
+            border-bottom: 7px solid transparent
+            border-top: 7px solid transparent
+
+      &:nth-child(2n)
+        height: 54px
+        .s-timeline-item-head
+          top: -82px
+          margin-left: -2px
+        .s-timeline-item-content
+          left: 50%
+          margin-left: 20px
+          top: 0px
+          transform: translateY(-80%)
+
+          &:before
+            top 25px
+            left: -7px
+            margin-top: -8px
+            border-right: 8px solid #DCDEE2
+            border-bottom: 8px solid transparent
+            border-top: 8px solid transparent
+
+          &:after
+            top: 25px
+            left: -6px
+            margin-top: -7px
+            border-right: 7px solid #fff
+            border-bottom: 7px solid transparent
+            border-top: 7px solid transparent
+
+      &:first-child
+        font-size 14px
+
+  &.oneway
+    .s-timeline-item
+      .s-timeline-item-head
+        width 8px
+        height 8px
+        background-color fantaColor
+        border-radius 50%
+        border 1px solid transparent
+        position absolute
+        top: 3px
+
+      .s-timeline-item-content
+        font-size 12px
+        position relative
+        zoom: 1
+        overflow hidden
+        top 3px
+        padding-top: 3px
+
+      .s-timeline-item-tail
+        height 100%
+        width: 4px
+        background: #a6dcfc
+        position absolute
+        top 3px
+
+      &:last-child
+        .s-timeline-item-tail
+          background linear-gradient(#a6dcfc, transparent)
+
+      .s-time-indicater
+        position relative
+        float: left
+        color: #20a7f8
+        line-height: 12px
+
+  &.equalTwoway
+    margin 5px 10px 0 10px
+
+    .timeline-icon
+      left 50%
+      margin-left 50%
+      top 3px
+
+      div
+        height 33px
+        width 1px
+        position relative
+        background: rgb(204, 204, 204);
+        left 6px
+        margin -3px 0
+
+    .s-timeline-item
+      .s-timeline-item-head
+        width 8px
+        height 8px
+        background-color #20a7f8
+        border-radius 50%
+        border 1px solid transparent
+        position absolute
+        top: 3px
+
+      .s-timeline-item-content
+        font-size 12px
+        position relative
+        zoom: 1
+        overflow hidden
+        top -38px
+        padding-top: 33px
+
+      .s-timeline-item-tail
+        height 100%
+        width: 1px
+        background: rgb(204, 204, 204);
+        position absolute
+        top 3px
+
+      &:last-child
+        .s-timeline-item-tail
+          background linear-gradient(rgb(204, 204, 204), transparent)
+
+      .left
+        position relative
+        float: left
+        line-height: 12px
+        font-size 14px
+
+      .right
+        position absolute
+        top 15px
+        margin-left 20px
+        width 100px
+        font-size 14px
+
+  &.beauty
+    .s-timeline-item
+      .s-time-indicater
+        padding-right: 12px
+
+        span
+          height: 22px
+          line-height 22px
+          display inline-block
+          color: #667480
+          font-weight: 600
+          padding-left: 5px
+          padding-right: 3px
+          background #141d2a
+          border: 1px solid #184173
+          border-top-left-radius 3px
+          border-bottom-left-radius 3px
+          position: relative
+
+          &:before, &:after
+            content: ''
+            display block
+            width: 0
+            height: 0
+            position absolute
+
+          &:before
+            top: -1px
+            right: -12px
+            border-left: 12px solid #184173
+            border-bottom: 12px solid transparent
+            border-top 12px solid transparent
+
+          &:after
+            top: 0
+            right: -11px
+            border-left: 11px solid #141d2a
+            border-bottom: 11px solid transparent
+            border-top 11px solid transparent
+
+  .s-timeline-item-head-blue
+    border-color blue_color
+    color blue_color
+
+  .s-timeline-item-head-red
+    border-color red_color
+    color red_color
+
+  .s-timeline-item-head-green
+    border-color green_color
+    color green_color
+
+  .s-timeline-item-head-bg-yellow
+    background-color yellow_color !important
+
+  .s-timeline-item-head-bg-red
+    background-color red_color !important
+
+  .s-timeline-item-head-bg-green
+    background-color green_color !important
+
+  .s-timeline-item-head-custom
+    width 40px
+    height auto
+    margin-top 6px
+    padding 3px 0
+    text-align center
+    line-height 1
+    border 0
+    border-radius 0
+    font-size 14px
+    position absolute
+    left -13px
+    transform translateY(-50%)

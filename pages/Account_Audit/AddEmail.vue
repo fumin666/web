@@ -1,0 +1,79 @@
+<template>
+
+  <s-table-page
+    ref="addLinkDialog"
+    :data="userList"
+    :header-search="defSearch()"
+    @selection-change="handleUserListChange">
+    <s-table-column type="selection" width="45"></s-table-column>
+    <s-table-column label="用户名" prop="userLoginName"></s-table-column>
+    <s-table-column label="真实姓名" prop="userRealName"></s-table-column>
+    <s-table-column label="Email" prop="userMail"></s-table-column>
+    <s-table-column label="手机号" prop="userPhone"></s-table-column>
+    <s-table-column label="微信号" prop="userWechat"></s-table-column>
+  </s-table-page>
+</template>
+
+<script>
+  import $axios from 'sunflower-ajax'
+
+  export default {
+
+    props: {
+      data: Array
+    },
+    data() {
+      return {
+        autoUser: this.data,
+        userList: [],
+        selectedUser: []
+      }
+    },
+    methods: {
+      defSearch() {
+        return {
+          width: 8,
+          offset: 16,
+          placeholder: '请输入查询条件',
+          searchProps: ['userLoginName', 'userRealName', 'userMail', 'userPhone', 'userWechat']
+        }
+      },
+      getList() {
+        $axios.post('/iamUserInfo/list', {}).then((res) => {
+          if (res.data && res.data instanceof Array) {
+            this.userList = res.data;
+            if (this.autoUser.length > 0) {
+              this.autoSelect();
+            }
+          }
+        });
+      },
+      autoSelect() {
+        this.$nextTick(() => {
+          for (let i = 0; i < this.autoUser.length; i++) {
+            if (this.autoUser[i].tmp) {
+              this.$refs.addLinkDialog.toggleRowSelection(this.autoUser[i], true);
+              continue;
+            } else {
+              for (let j = 0; j < this.userList.length; j++) {
+                if (this.autoUser[i].userUuid === this.userList[j].uuid) {
+                  this.$refs.addLinkDialog.toggleRowSelection(this.userList[j], true);
+                  break;
+                } else {
+                  this.$refs.addLinkDialog.toggleRowSelection(this.autoUser[i], true);
+                  break;
+                }
+              }
+            }
+          }
+        });
+      },
+      handleUserListChange(val) {
+        this.selectedUser = val;
+      }
+    },
+    created() {
+      this.getList();
+    }
+  }
+</script>

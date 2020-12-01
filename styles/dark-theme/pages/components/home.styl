@@ -1,0 +1,75 @@
+#home-content
+  height calc(100% - 45px)
+  background-color #19232e
+  display flex
+  justify-content center
+  align-items center
+  .main-content
+    width 1230px
+    min-height 300px
+    display flex
+    justify-content flex-start
+    margin-top -5%
+    .item-content
+      height 190px
+      border-radius 4px
+      // border 1px solid rgba(59,138,238,0.1)
+      display flex
+      justify-content center
+      align-items center
+      transition all .3s
+      margin-top 1.2%
+      margin-bottom 20px
+      .detail-content
+        // height 200px
+        display flex
+        flex-direction column
+        justify-content flex-start
+        align-items center
+        .icon-text
+          position absolute
+          top 0px
+          left 0px
+          right 0px
+          bottom 0px
+          margin auto
+          transition:all 1s
+        .name-text
+          font-size 16px
+          color: #FFFFFF;
+          opacity: 0.85;
+          font-weight bold
+          margin-bottom 10px
+        .msg-text
+          font-size 12px
+          color #9c9796
+      .detail-content:hover
+        .icon-text
+          transform: scale(1.2);
+          transition:all 1s
+    .item-content:hover
+      .detail-content
+        cursor pointer
+        .name-text
+          color #1991c7
+        .msg-text
+          color gray_l1_text
+.home-fooer
+  position fixed
+  width 100%
+  height auto !important
+  bottom 0px
+  padding-bottom 15px
+  p
+    font-size 12px
+    color #333D46
+    line-height 18px
+    text-align center
+  .footer-text
+    font-size 12px
+    color #9c9796
+.collapse_content {
+  &:before {
+    border-left: 5px solid theme_iconcolor;
+  }
+}
