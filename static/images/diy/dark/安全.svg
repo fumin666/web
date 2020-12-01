@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="34px" height="31px" viewBox="0 0 34 31" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 52.5 (67469) - http://www.bohemiancoding.com/sketch -->
+    <title>安全</title>
+    <desc>Created with Sketch.</desc>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="自定义首页资产视角-copy" transform="translate(-1048.000000, -295.000000)" fill-rule="nonzero">
+            <g id="Group-4-Copy-4" transform="translate(1033.000000, 254.000000)">
+                <g id="安全" transform="translate(8.000000, 35.000000)">
+                    <rect id="Rectangle-13" fill="#D8D8D8" opacity="0" x="0" y="0" width="48" height="48"></rect>
+                    <g id="SCDN-安全加速" transform="translate(6.000000, 7.000000)">
+                        <polygon id="Rectangle-path" fill="#000000" opacity="0" points="0.610169492 0 34.779661 0 34.779661 34 0.610169492 34"></polygon>
+                        <circle id="Oval-7" fill="#006EAE" cx="27.5" cy="10.5" r="1.5"></circle>
+                        <circle id="Oval-7-Copy" fill="#006EAE" cx="8.5" cy="10.5" r="1.5"></circle>
+                        <circle id="Oval-7-Copy-2" fill="#006EAE" cx="17.5" cy="28.5" r="1.5"></circle>
+                        <polyline id="Path-4" stroke="#006EAE" stroke-width="1.83050847" points="10.3728814 6.91265044 14.4631133 0 20.548887 0 24.5436011 6.91265044"></polyline>
+                        <polyline id="Path-4-Copy" stroke="#006EAE" stroke-width="1.83050847" transform="translate(29.127138, 23.619542) rotate(120.000000) translate(-29.127138, -23.619542) " points="22.0417783 27.0758668 26.1320102 20.1632163 32.2177839 20.1632163 36.212498 27.0758668"></polyline>
+                        <polyline id="Path-4-Copy-2" stroke="#006EAE" stroke-width="1.83050847" transform="translate(6.550867, 23.619542) scale(-1, 1) rotate(120.000000) translate(-6.550867, -23.619542) " points="-0.534492931 27.0758668 3.55573906 20.1632163 9.64151271 20.1632163 13.6362268 27.0758668"></polyline>
+                        <polyline id="Path-6" stroke="#006EAE" points="10.6320983 12.4070444 17.7014373 17.4118511 17.7014373 25.4214665"></polyline>
+                        <polyline id="Path-6" stroke="#006EAE" transform="translate(21.166768, 18.914255) scale(-1, 1) translate(-21.166768, -18.914255) " points="17.6320983 12.4070444 24.7014373 17.4118511 24.7014373 25.4214665"></polyline>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

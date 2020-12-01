@@ -1,0 +1,50 @@
+html{height:100%; overflow:hidden;}
+body{height:100%;}
+.graphContainer{
+    width:100%;
+    height:100%;
+    background:rgba(0,145,255,0.12);
+    background-size: 100% 100%;
+}
+.graphItem{
+    width:100%;
+    height:calc(100% - 102px);
+    position: absolute;
+    left:999999px;
+    overflow:hidden;
+}
+.graphTitle{
+    position: absolute;
+    width:100%;
+    z-index: 998;
+    padding-top:20px;
+}
+.graphTitle span{
+    font-size:32px;
+    color:#ffffff;
+}
+.titleItem{
+    display: none;
+}
+/*放大缩小*/
+#zoomBtns{position: absolute; overflow: visible; top: 5px; right: 70px;z-index:999;}
+#zoomBtns .item{
+    position: absolute; border: 1px solid gray; text-align: center; font-size: 24px; width: 25px; height: 25px; cursor: pointer;background-color: transparent;
+}
+#zoomInBtn{left: 0px; top: 0px;}
+#zoomOutBtn{left: 25px; top: 0px;}
+#settingBtns{position: absolute; right: 8px; top: 50px;z-index:999;}
+.small_box{width:210px;height:182px;overflow:hidden;margin:0 auto;z-index: 1000;position: absolute;bottom:-82px;left: 50%;margin-left: -105px;}
+.small_list{position:relative;float:left;width:120px;height:81px;overflow:hidden;}
+.small_list ul{height:81px;overflow:hidden;}
+.small_list ul li{position:relative;float:left;margin-right:10px;width:110px;}
+.small_list ul li img{display:block;}
+.small_list ul li .bun_bg{display:block;position:absolute;top:0;left:0;width:110px;height:81px;background:#fff;opacity:0;}
+.small_list ul li.on .bun_bg{display:none;}
+.small_list ul li.on .outline{border: 2px solid #b3c11b;}
+.small_list ul li .outline{overflow:hidden;width:112px;height:77px;background:url(../img/bg.jpg) no-repeat;background-size: 112px 77px;border:1px solid #2172A9;}
+.btn{display:block;width:40px;height:80px;cursor:pointer;}
+.left_btn{float:left;margin-right:10px;background:url(../img/arrows.png) no-repeat 0 0;}
+.left_btn:hover{background:url(../img/arrows.png) no-repeat 0 -80px;}
+.right_btn{float:right;background:url(../img/arrows.png) no-repeat -40px 0;}
+.right_btn:hover{background:url(../img/arrows.png) no-repeat -40px -80px;}

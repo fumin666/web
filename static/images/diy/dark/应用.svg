@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="34px" height="39px" viewBox="0 0 34 39" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 52.5 (67469) - http://www.bohemiancoding.com/sketch -->
+    <title>应用</title>
+    <desc>Created with Sketch.</desc>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="自定义首页资产视角-copy" transform="translate(-1048.000000, -161.000000)" fill-rule="nonzero">
+            <g id="Group-4-Copy-2" transform="translate(1033.000000, 121.000000)">
+                <g id="应用" transform="translate(8.000000, 35.000000)">
+                    <g id="Group-15">
+                        <polygon id="Rectangle-path" fill="#000000" opacity="0" points="0 0 48 0 48 48 0 48"></polygon>
+                        <g id="Group-13" transform="translate(0.000000, 1.000000)" stroke="#006EAE">
+                            <polygon id="Polygon-2" stroke-width="1.18518519" points="23.4074074 9.51898734 34.1846124 15.7658228 34.1846124 28.2594937 23.4074074 34.5063291 12.6302024 28.2594937 12.6302024 15.7658228"></polygon>
+                            <path d="M13.7155986,10.927 L24,4.9658103 L39.9092074,14.1873293 L39.9092074,18.6798826 M39.9092074,21.5563697 L39.9092074,32.6303673 L24,41.8518862 L19.6212465,39.3138114 M17.2806702,37.9571336 L8.09079258,32.6303673 L8.09079258,14.1873293 L11.3647996,12.2896032" id="Polygon" stroke-width="1.77777778" transform="translate(24.000000, 23.408848) rotate(-300.000000) translate(-24.000000, -23.408848) "></path>
+                            <polyline id="Path-2" stroke-width="1.18518519" points="13.2511241 16.4632239 23.3923676 21.5491486 23.3923676 34.1816418"></polyline>
+                            <path d="M33.6135333,16.3814996 L23.6445666,21.3021927" id="Path-3" stroke-width="1.18518519"></path>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

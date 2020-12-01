@@ -1,0 +1,38 @@
+<mxStylesheet>
+    <add as="cabinetCell">
+      <add as="fontSize" value="12"/>
+      <add as="fontFamily" value="Verdana"/>
+      <add as="strokeColor" value="none"/>
+      <add as="fillColor" value="none"/>
+      <add as="spacing" value="0"/>
+    </add>
+    <add as="cabinetCenterCell">
+      <add as="fontSize" value="12"/>
+      <add as="fontFamily" value="Verdana"/>
+      <add as="strokeColor" value="none"/>
+      <add as="fillColor" value="#4a4a4a"/>
+    </add>
+    <add as="centerLineCell">
+      <add as="fillColor" value="#332e34"/>
+      <add as="strokeColor" value="#1b161c"/>
+      <add as="fontColor" value="#5d5e60"/><add as="fontColor" value="#5d5e60"/>
+      <add as="spacing" value="0"/>
+    </add>
+    <add as="cabinetTopCell">
+      <add as="fillColor" value="#9c9c9c"/>
+      <add as="strokeColor" value="none"/>
+    </add>
+    <add as="topLineCell">
+      <add as="fillColor" value="#4a4a4a"/>
+      <add as="strokeColor" value="none"/>
+      <add as="fontColor" value="#ffffff"/>
+    </add>
+    <add as="cabinetBottomCell">
+      <add as="shape" value="image"/>
+      <add as="strokeColor" value="none"/>
+    </add>
+    <add as="panel">
+      <add as="strokeColor" value="none"/>
+      <add as="fillColor" value="none"/>
+    </add>
+</mxStylesheet>

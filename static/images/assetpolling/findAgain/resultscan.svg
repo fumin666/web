@@ -1,0 +1,47 @@
+<svg width="208" height="209" viewBox="0 0 208 209" fill="none" xmlns="http://www.w3.org/2000/svg">
+<circle cx="103.965" cy="104.5" r="56.0194" fill="url(#paint0_linear)" stroke="#8CB8E1" stroke-width="10"/>
+<circle cx="103.965" cy="104.5" r="60.5194" stroke="url(#paint1_linear)"/>
+<circle opacity="0.2" cx="103.965" cy="104.5" r="86" stroke="#8CB8E1"/>
+<path opacity="0.1" d="M207.5 104.5C207.5 161.94 161.159 208.5 104 208.5C46.8408 208.5 0.5 161.94 0.5 104.5C0.5 47.0601 46.8408 0.5 104 0.5C161.159 0.5 207.5 47.0601 207.5 104.5Z" stroke="#8CB8E1"/>
+<ellipse cx="103.965" cy="140.709" rx="30.1744" ry="2.01163" fill="#6DADCD"/>
+<path d="M93.2363 132.663V122.605H113.353V131.992C113.353 134.674 117.823 137.58 120.058 138.698V140.709H85.8604V138.698C85.8604 138.698 91.8952 134.674 93.2363 132.663Z" fill="url(#paint2_linear)"/>
+<rect x="57.6978" y="67.6201" width="89.8527" height="60.3488" fill="#F3F9FB"/>
+<rect x="61.7207" y="71" width="81.8062" height="49.6202" fill="url(#paint3_linear)"/>
+<path opacity="0.2" d="M85.5 71H78L62 120.5H69.5L85.5 71Z" fill="white"/>
+<path opacity="0.2" d="M92.5 71H89L73 120.5H76.5L92.5 71Z" fill="white"/>
+<circle cx="101.953" cy="123.946" r="1.34109" fill="#52A6D9"/>
+<rect x="87.2017" y="138.698" width="33.5271" height="1.34109" fill="white"/>
+<g clip-path="url(#clip0)" filter="url(#filter0_d)">
+<path d="M88.87 94.8796L97.9889 102.145L120.695 81.2273C120.695 81.2273 122.218 79.8366 123.549 80.9232C123.944 81.2481 124.402 82.1735 123.372 83.624L99.6655 111.394C99.6655 111.394 97.8484 113.881 95.6909 111.368L85.4596 97.5544C85.4596 97.5544 84.2456 95.6828 85.7637 94.5625C86.2783 94.1882 87.4429 93.6006 88.87 94.8796Z" fill="white"/>
+</g>
+<defs>
+<filter id="filter0_d" x="81" y="75" width="47" height="47" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+<feFlood flood-opacity="0" result="BackgroundImageFix"/>
+<feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"/>
+<feOffset dy="2"/>
+<feGaussianBlur stdDeviation="2"/>
+<feColorMatrix type="matrix" values="0 0 0 0 0.335174 0 0 0 0 0.635016 0 0 0 0 0.820833 0 0 0 1 0"/>
+<feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow"/>
+<feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow" result="shape"/>
+</filter>
+<linearGradient id="paint0_linear" x1="103.965" y1="43.4806" x2="103.965" y2="165.519" gradientUnits="userSpaceOnUse">
+<stop stop-color="#3463AB"/>
+<stop offset="1" stop-color="#BAEDFF"/>
+</linearGradient>
+<linearGradient id="paint1_linear" x1="103.965" y1="43.4806" x2="103.965" y2="165.519" gradientUnits="userSpaceOnUse">
+<stop stop-color="#DDEFFF"/>
+<stop offset="1" stop-color="#5E9ED9" stop-opacity="0"/>
+</linearGradient>
+<linearGradient id="paint2_linear" x1="102.959" y1="122.605" x2="102.959" y2="140.709" gradientUnits="userSpaceOnUse">
+<stop stop-color="#89B1CE"/>
+<stop offset="1" stop-color="#E6F1FF"/>
+</linearGradient>
+<linearGradient id="paint3_linear" x1="102.624" y1="71" x2="102.624" y2="120.62" gradientUnits="userSpaceOnUse">
+<stop stop-color="#B6DDF4"/>
+<stop offset="1" stop-color="#72BBE8"/>
+</linearGradient>
+<clipPath id="clip0">
+<rect width="39" height="39" fill="white" transform="translate(85 77)"/>
+</clipPath>
+</defs>
+</svg>

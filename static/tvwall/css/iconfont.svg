@@ -1,0 +1,41 @@
+<?xml version="1.0" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd" >
+<!--
+2013-9-30: Created.
+-->
+<svg>
+<metadata>
+Created by iconfont
+</metadata>
+<defs>
+
+<font id="iconfont" horiz-adv-x="1024" >
+  <font-face
+    font-family="iconfont"
+    font-weight="500"
+    font-stretch="normal"
+    units-per-em="1024"
+    ascent="896"
+    descent="-128"
+  />
+    <missing-glyph />
+    
+    <glyph glyph-name="youxia" unicode="&#983463;" d="M772.096 652.288q17.408 17.408 39.424 22.528t40.96-2.048 31.744-26.624 12.8-50.176l0-461.824q0-27.648-9.216-52.224t-25.6-43.008-38.912-28.672-49.152-10.24l-490.496 0q-26.624 0-43.52 13.312t-23.04 32.768-1.024 41.472 22.528 39.424q25.6 25.6 70.144 69.12t98.304 96.256 110.592 109.056 107.52 105.984 90.112 88.576 56.832 56.32z"  horiz-adv-x="1024" />
+
+    
+    <glyph glyph-name="right" unicode="&#59063;" d="M333.1 777.1l-35.3-35.4 357.7-357.7-357.7-357.7 35.3-35.4 393.1 393.1z"  horiz-adv-x="1024" />
+
+    
+    <glyph glyph-name="left" unicode="&#59064;" d="M690.9-9.1l35.3 35.4-357.7 357.7 357.7 357.7-35.3 35.4-393.1-393.1z"  horiz-adv-x="1024" />
+
+    
+    <glyph glyph-name="most-left" unicode="&#59236;" d="M780.7 741.7l-357.8-357.7 357.7-357.7-35.4-35.4-393 393.1 393.1 393.1 35.4-35.4zM243.3 777.1v-786.1h50v786.1h-50z"  horiz-adv-x="1024" />
+
+    
+    <glyph glyph-name="most-right" unicode="&#59237;" d="M278.7 777.1l393.1-393.1-393.1-393.1-35.4 35.4 357.8 357.7-357.8 357.7 35.4 35.4zM730.7 777.1v-786.1h50v786.1h-50z"  horiz-adv-x="1024" />
+
+    
+
+
+  </font>
+</defs></svg>

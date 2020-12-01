@@ -1,0 +1,252 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <script type="text/javascript" src="./js/jquery.js"></script>
+  <script type="text/javascript" src="./js/sea.js" id="seajsnode"></script>
+  <link rel="stylesheet" href="./css/tvwall.css" />
+  <link rel="stylesheet" href="./css/businessService.css">
+  <link rel="stylesheet" href="./js/manageLevel/css/manageLevel.css">
+  <script type="text/javascript">
+    mxBasePath = '../mxgraph';
+    var STENCIL_PATH = mxBasePath + '/stencils';
+    var IMAGE_PATH = mxBasePath + '/images';
+    var STYLE_PATH = mxBasePath;
+  </script>
+  <script type="text/javascript" src="../mxgraph/js/mxClient.js"></script>
+  <script type="text/javascript" src="../mxgraph/js/mxStencilRegistry.js"></script>
+  <style rel="stylesheet">
+    .businessEffectSvgWrapper {
+      position: relative;
+      flex: 1;
+      overflow: hidden;
+    }
+    .businessEffectSvgWrapper .businessEffectSvg {
+      position: absolute;
+      left: 0;
+      top: 0;
+      cursor: move;
+      font-size: 14px;
+    }
+    .businessEffectSvgWrapper .businessEffectSvg line.swimLine {
+      stroke: #344458;
+    }
+    .businessEffectSvgWrapper .businessEffectSvg image.asset {
+      cursor: pointer;
+    }
+    .businessEffectSvgWrapper .businessEffectSvg text.assetDes {
+      cursor: text;
+      fill: #b3becc;
+    }
+    .businessEffectSvgWrapper .businessEffectSvg line.rel {
+      stroke-dasharray: 5, 5;
+    }
+    .businessEffectSvgWrapper .businessEffectSvg text.relDes {
+      text-anchor: middle;
+      cursor: text;
+    }
+    .businessEffectSvgWrapper .businessEffectSvg line.rel {
+      animation: dash 5s linear infinite;
+    }
+    @-moz-keyframes dash {
+      to {
+        stroke-dashoffset: 0;
+      }
+    }
+    @-webkit-keyframes dash {
+      to {
+        stroke-dashoffset: 0;
+      }
+    }
+    @-o-keyframes dash {
+      to {
+        stroke-dashoffset: 0;
+      }
+    }
+    @keyframes dash {
+      to {
+        stroke-dashoffset: 0;
+      }
+    }
+  </style>
+</head>
+<body>
+<div class="content f-main staticTvwall staticTvwallInci" style="transform-origin: 0 0;">
+  <div id="main-content">
+    <div class="left">
+      <div id="business-graph">
+        <div class="banner">
+          <div class="large_box">
+            <ul id="large_list">
+            </ul>
+          </div>
+          <div class="small_box">
+            <span class="btn left_btn"></span>
+            <div class="small_list">
+              <ul id="small_list" style="width: 720px;">
+              </ul>
+            </div>
+            <span class="btn right_btn"></span>
+          </div>
+        </div>
+        <div id="fix-item">
+          <div style="margin: 30px 0 0 40px;">
+            <div id="serb" class="fix-word">服务状态：<div id="manageCon"></div></div>
+            <div id="aval" class="fix-word">
+              可用率：
+              <div class="battery-item">
+                <li><span></span></li>
+                <li><span></span></li>
+                <li><span></span></li>
+                <li><span></span></li>
+                <li><span></span></li>
+                <li><span></span></li>
+                <li><span></span></li>
+                <li><span></span></li>
+                <li><span></span></li>
+                <li><span></span></li>
+              </div>
+              <span id="battery-word">0%</span>
+            </div>
+          </div>
+        </div>
+        <div class="clr"></div>
+      </div>
+    </div>
+    <div class="right">
+      <div id="totalInfo"></div>
+      <div id="compHealth"></div>
+    </div>
+  </div>
+</div>
+</body>
+<script type="text/template" id="health-template">
+  <div class="subtitle">设备健康状况</div>
+  <div id="health-list">
+    <%if(resp.length>0){%>
+    <div id="health-flexbox">
+      <div class="first-row word-break first-box">资产名称</div>
+      <div class="first-row word-break second-box">IP地址</div>
+      <div class="first-row word-break third-box" title="健康状况">健康状况</div>
+      <%_.each(resp, function(item){ %>
+      <tr>
+        <div class="word-break first-box"><%=item.itcompName%></div>
+        <div class="second-box"><%=item.controlAdderss%></div>
+        <div class="third-box">
+          <%if(item.used2 == 2){%>
+          <span class="green-span">正常</span>
+          <%}else if(item.used2 == 1){%>
+          <span class="yellow-span">告警</span>
+          <%}else if(item.used2 == 0) {%>
+          <span class="red-span">异常</span>
+          <%}%>
+        </div>
+      </tr>
+      <%})%>
+    </div>
+    <%}%>
+  </div>
+</script>
+<script type="text/template" id="totalInfo-template">
+  <%if(resp!=null){%>
+  <div class="tablelist" cellPadding="0" cellSpacing="0">
+    <div class="tableright word-break"><span class="tdInner-left">业务服务名称</span></div>
+    <div class="tableleft"><span class="tdInner-right business-name"><%=resp.name%></span></div>
+    <div class="tableright word-break" ><span class="tdInner-left">服务状态</span></div>
+    <div class="tableleft">
+            <span class="tdInner-right">
+                <%if(resp.status!=null){%>
+                    <%if(resp.status==3){%>
+                    <span class="green-span"></span>
+                    <%}else if(resp.status==1){%>
+                    <span class="red-span"></span>
+                    <%}else if(resp.status==2){%>
+                    <span class="yellow-span"></span>
+                    <%}%>
+                    <%=resp.statusName%>
+                <%}else{%>
+                    未知
+                <%}%>
+            </span>
+    </div>
+    <div class="tableright word-break"><span class="tdInner-left">可用率</span></div>
+    <div class="tableleft">
+            <span id="progressPar" class="tdInner-right">
+                    <span id="progressBarBg"><span id="progressBar" style="width: <%=resp.todayAvailable%>%"></span></span><%=resp.todayAvailable%>%
+            </span>
+    </div>
+    <div class="tableright word-break"><span class="tdInner-left">影响度</span></div>
+    <div class="tableleft"><span class="tdInner-right"><%=resp.effectName%></span></div>
+    <div class="tableright word-break"><span class="tdInner-left">关键程度</span></div>
+    <div class="tableleft"><span class="tdInner-right"><%=resp.criticalityName%></span></div>
+    <div class="tableright word-break lastBorder"><span class="tdInner-left">根本原因</span></div>
+    <div class="tableleft lastBorder"><span class="tdInner-right" title="<%=resp.reason%>"><%if(resp.reason!=null){%><%=resp.reason%><%}else{%>无<%}%></span></div>
+  </div>
+  <%}%>
+</script>
+<script type="text/template" id="businessSet-template">
+  <form id="incidentCfg">
+    <div class="f-in-col">
+      <div class="f-box">
+        <div class="f-box-body">
+          <div class="f-row odd-row">
+            <div class="f-col-5">
+              <div class="f-in-col">
+                缩放方式
+              </div>
+            </div>
+            <div class="f-col-7">
+              <div class="f-in-col">
+                <select name="scaleType" id="scaleType">
+                  <%if (scaletype == 0) {%>
+                  <option value="0" selected>铺满屏幕</option>
+                  <option value="1">保持比例</option>
+                  <option value="2">自定义设置</option>
+                  <%} else if (scaletype == 1) {%>
+                  <option value="0">铺满屏幕</option>
+                  <option value="1" selected>保持比例</option>
+                  <option value="2">自定义设置</option>
+                  <%} else {%>
+                  <option value="0">铺满屏幕</option>
+                  <option value="1">保持比例</option>
+                  <option value="2" selected>自定义设置</option>
+                  <%}%>
+                </select>
+              </div>
+            </div>
+          </div>
+          <div class="f-row even-row zdy">
+            <div class="f-col-5">
+              <div class="f-in-col">
+                <a class="notNull">*</a> 水平缩放
+              </div>
+            </div>
+            <div class="f-col-7">
+              <div class="f-in-col">
+                <input type="text" value="<%=xbei%>" checkType="isNull" id="xBei" /> 倍
+              </div>
+            </div>
+          </div>
+          <div class="f-row odd-row zdy">
+            <div class="f-col-5">
+              <div class="f-in-col">
+                <a class="notNull">*</a> 垂直缩放
+              </div>
+            </div>
+            <div class="f-col-7">
+              <div class="f-in-col">
+                <input type="text" value="<%=ybei%>" checkType="isNull" id="yBei" /> 倍
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </form>
+</script>
+<script type="text/javascript">
+  seajs.use(['./tvwallBusinessServiceShow/js/tvwall.business.main.js'], function() {});
+  function settingPage(tvwallId, location){
+    setBussiness(tvwallId,location);
+  }
+</script>
+</html>

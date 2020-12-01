@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="zh-cn">
+<head>
+    <script type="text/javascript" src="./js/jquery.js"></script>
+    <script type="text/javascript" src="./js/sea.js" id="seajsnode"></script>
+    <link rel="stylesheet" href="./css/topology.css"/>
+    <link rel="stylesheet" href="./css/tvwall.css"/>
+    <script type="text/javascript">
+        mxBasePath = '../mxgraph';
+        var STENCIL_PATH = mxBasePath + '/stencils';
+        var IMAGE_PATH = mxBasePath + '/images';
+        var STYLE_PATH = mxBasePath;
+        var topology_config = {};
+        var topology_period = 180;
+        var topology_realtime = [1,1,1,1];
+        var hubType = 'hub';
+        var paramsId = '';
+    </script>
+  <script type="text/javascript" src="../mxgraph/js/mxClient3_1.js"></script>
+    <script>
+        mxOutline.prototype.showViewport = false;
+    </script>
+</head>
+<body id="topologyBody">
+<div class="graphTitle" id="graphTitle"></div>
+<div class="graphContainer" id="graphList">
+
+</div>
+<div class="banner">
+    <div class="small_box">
+        <span class="btn left_btn"></span>
+        <div class="small_list">
+            <ul id="small_list" style="width: 720px;">
+
+            </ul>
+        </div>
+        <span class="btn right_btn"></span>
+    </div>
+</div>
+<script type="text/template" id="setting_template">
+    <div id="settingBtns">
+        <button id="saveSettingBtn">保存视野</button> <button id="cancelSettingBtn">取消</button>
+    </div>
+</script>
+<script type="text/template" id="zoomBtns_template">
+    <div id="zoomBtns">
+        <div id="zoomInBtn" class="item">+</div>
+        <div id="zoomOutBtn" class="item">-</div>
+    </div>
+</script>
+<script type="text/javascript">
+    seajs.use(['./TvwallTopology/js/index/tvwallTopo.main'],function(){});
+    function settingPage(tvwallId, location){
+        settingCurrnetPage(tvwallId, location);
+    }
+</script>
+</body>
+</html>
+

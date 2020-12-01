@@ -1,0 +1,130 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <script type="text/javascript" src="./js/jquery.js"></script>
+  <script type="text/javascript" src="./js/sea.js" id="seajsnode"></script>
+  <link rel="stylesheet" href="./css/tvwall.css">
+</head>
+<body>
+<div class="content f-main staticTvwallInci">
+  <div class="half-l">
+    <div id="inciPt1">
+      <div class="title">
+        事件总数:<span id="infoAll">0</span>
+      </div>
+      <div class="threeInci">
+        <div>监视器<span id="infoMonitor">0</span></div>
+        <!--<div>Syslog<span id="infoSyslog">0</span></div>-->
+        <div>PING<span id="infoPing">0</span></div>
+      </div>
+      <div id ="incidentChart1"></div>
+    </div>
+    <div id="inciPt2">
+      <div class="title">
+        各级别事件数
+      </div>
+      <div id="incidentChart2"></div>
+    </div>
+  </div>
+  <div class="half-r">
+    <div id="inciPt3">
+      <div class="title">
+        事件恢复状况
+      </div>
+      <div id="incidentChart3"></div>
+    </div>
+    <div id="inciPt4">
+      <div class="title">
+        最新事件
+      </div>
+      <div id="incidentChart4"></div>
+    </div>
+  </div>
+</div>
+</body>
+<script type="text/javascript">
+  seajs.use(['./incidentInfo/js/incidentInfoIndex'], function() {});
+  function settingPage(tvwallId, location){
+    setIncident(tvwallId,location);
+  }
+</script>
+<script type="text/template" id="latest-template">
+  <%if(data.length > 0) {%>
+  <ul id="evt-stream">
+    <%_.each(data, function(elem) {%>
+    <li>
+      <div class="evt-common evt-<%=level[elem.level]%>"></div>
+      <div class="stream-left-div">
+        <span class="evt-name evt-bolder"><%=elem.itcompName%></span>
+        <span class="evt-desc" title="<%=elem.incidentContent%>"><%=elem.incidentContent%></span>
+      </div>
+      <div class="stream-right-div">
+        <span class="evt-time evt-bolder"><%=elem.modifyTimeStr%></span>
+        <span class="evt-dura">持续时长:<%=elem.dateRange%></span>
+      </div>
+    </li>
+    <%})%>
+  </ul>
+  <%}%>
+</script>
+<script type="text/template" id="incidentCfg-template">
+  <form id="incidentCfg">
+    <div class="f-in-col">
+      <div class="f-box">
+        <div class="f-box-body">
+          <div class="f-row odd-row">
+            <div class="f-col-5">
+              <div class="f-in-col">
+                缩放方式
+              </div>
+            </div>
+            <div class="f-col-7">
+              <div class="f-in-col">
+                <select name="scaleType" id="scaleType">
+                  <%if (scaletype == 0) {%>
+                  <option value="0" selected>铺满屏幕</option>
+                  <option value="1">保持比例</option>
+                  <option value="2">自定义设置</option>
+                  <%} else if (scaletype == 1) {%>
+                  <option value="0">铺满屏幕</option>
+                  <option value="1" selected>保持比例</option>
+                  <option value="2">自定义设置</option>
+                  <%} else {%>
+                  <option value="0">铺满屏幕</option>
+                  <option value="1">保持比例</option>
+                  <option value="2" selected>自定义设置</option>
+                  <%}%>
+                </select>
+              </div>
+            </div>
+          </div>
+          <div class="f-row even-row zdy">
+            <div class="f-col-5">
+              <div class="f-in-col">
+                <a class="notNull">*</a> 水平缩放
+              </div>
+            </div>
+            <div class="f-col-7">
+              <div class="f-in-col">
+                <input type="text" value="<%=xbei%>" checkType="isNull" id="xBei" /> 倍
+              </div>
+            </div>
+          </div>
+          <div class="f-row odd-row zdy">
+            <div class="f-col-5">
+              <div class="f-in-col">
+                <a class="notNull">*</a> 垂直缩放
+              </div>
+            </div>
+            <div class="f-col-7">
+              <div class="f-in-col">
+                <input type="text" value="<%=ybei%>" checkType="isNull" id="yBei" /> 倍
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </form>
+</script>
+</html>

@@ -1,0 +1,366 @@
+// 配置项管理
+.asset-category-list
+  width 100%
+  margin-top 12px
+  height 230px
+  .asset-category
+    flex 1
+    background-color #FFFFFF
+    height 108px
+    text-align center
+    padding-top 12px
+    box-shadow: 2px 4px 20px rgba(59,138,238,0.1);
+    .icon
+      font-size 45px
+      color original_color
+      &:hover
+        font-size 46px
+    .name
+      color gray_l3_text
+      overflow: hidden;
+      white-space: nowrap;
+      text-overflow: ellipsis;
+.asset-calc-resource, .asset-store-resource
+  .grid-content
+    padding 0 8px
+    background-color rgba(original_l2_black, 0.2)
+    .cont
+      float right
+      color gray_l3_text
+  .chartItem
+    height 106px
+
+
+// 配置基准 waterfall waterfallform waterfallForm waterfall-form
+
+.current-baseline
+  display flex
+  box-sizing border-box
+  justify-content space-between
+  margin-bottom 10px
+  padding-right 20px
+  background block_bg
+  .current-baseline-left, .current-baseline-right
+    display flex
+    align-items center
+  .current-baseline-left
+    justify-content space-between
+    width 160px
+    padding 10px 30px 10px 20px
+    background btnDefaultBackground
+    color btnDefaultColor
+  a
+    text-decoration none
+
+.waterfall
+  margin-top 10px
+  position relative
+  padding-top 1px
+  border-top solid 1px #e9eef7
+  border-left solid 1px #e9eef7
+  .waterfall-item
+    // position absolute
+    background: linear-gradient(90deg, rgb(237, 240, 245) 120px, rgb(255, 255, 255) 120px) 0% 0% / auto repeat scroll padding-box border-box rgba(0, 0, 0, 0);
+    box-sizing border-box
+    border-bottom solid 1px #e9eef7
+    border-right solid 1px #e9eef7
+    // width 25%
+    color rgba(0,0,0,0.65)
+    font-size 14px
+    overflow hidden
+    margin-bottom 0
+    transition left,top .5s
+    background linear-gradient(90deg, tableHeaderBg 120px, block_bg 120px)
+    .s-form-item-error
+      top: auto
+      bottom -8px
+      left 6px
+    // &.waterfall-item-2
+    //   width 50%
+    // &.waterfall-item-3
+    //   width 33.33%
+    // &.waterfall-item-4
+    //   width 25%
+    &:hover
+      box-shadow 1px 0 50px 0 tableHoverBg inset
+    label
+      box-sizing border-box
+      padding-left 10px
+      /*background #031221*/
+      height 100%
+    .s-form-item-content
+      padding-left 5px
+
+
+/* all */
+.assetcontentfix
+  background: theme_bgcolor2;
+  width 100%;
+  min-height unset
+  margin 0 auto
+  font-size 14px
+  .linearline
+    height:5px;
+    position:absolute;
+    bottom:0;
+    width:100%;
+    background: linear-gradient(90deg, rgba(255, 255, 255, 0) 0%, #444F61 49.79%, rgba(255, 255, 255, 0) 101.22%);
+    opacity:0.2
+  .card-line
+    background theme_bgcolor1;
+    .clearfix
+      padding:0 20px;
+      border-bottom 1px solid #DCDEE2;
+      font-family: PingFang SC;
+      .card-title
+        font-size:14px;
+        opacity 0.85;
+/* 资产管理 */
+.assetcontentfix
+  .assetstatistic,.assetView
+    box-shadow: 0 -5px 4px rgba(123,134,164,.15), 0 -7px 6px rgba(105,126,147,.15);
+  .assetstatistic_all
+    height: 100%;
+    display:flex;
+    .assetstatistic_num
+      height:40px;
+      line-height:40px;
+      background: linear-gradient(90.51deg, #E1E7EF 40.56%, rgba(255, 255, 255, 0) 86.27%);
+    .assetstatistic_name1
+      font-size:16px;
+      margin-left:10px;
+      margin-right:30px;
+    .assetstatistic_val1
+      font-size:18px;
+      vertical-align: bottom;
+    .assetstatistic_type
+      margin-bottom: 1px;
+      height:36px;
+      line-height:36px;
+      background: linear-gradient(90.06deg, #FFFFFF -10.96%, #F5F7FA 46.66%, rgba(255, 255, 255, 0) 112.93%);
+      .assetstatistic_name
+        font-size:14px;
+        margin-left:10px;
+        margin-right:34px;
+      .assetstatistic_val
+        font-size:14px;
+/* 资产概览 */
+.assetcontentfix
+  .asset-category-list
+    margin-top:unset;
+    height:100%;
+    padding-top:10px;
+    box-sizing: border-box;
+    .assetcarousel
+      .cardcol:nth-of-type(1)
+        padding-right:5px
+      .cardcol:nth-of-type(2)
+        padding:0 5px
+      .cardcol:nth-of-type(3)
+        padding-left:5px
+    .s-carousel
+      height:100%;
+    .s-carousel-container
+      height:100%;
+    .s-carousel-item.is-active
+      box-shadow: unset;
+    .cardview
+      padding:12px 10px 5px 10px;height:220px;border: 1px solid #DCDEE2; border-radius: 2px;
+      .s-card-diy-title
+        font-weight unset
+      .s-card-diy-body
+        height:calc(100% - 20px);
+        padding-top:0;
+      .s-card-diy-header
+        height: unset;
+        line-height: unset;
+        border-bottom: unset !important;
+/* 右侧按钮 */
+.assetcontentfix
+  .contentOpacity
+    margin:20px 20px 10px 10px;
+/* 资产分布 */
+.assetcontentfix
+  .assetDifference
+    padding-right: 8px;
+    .card-line
+      background unset;
+      .s-card-header
+        background:theme_bgcolor1
+    .buttongroup
+      border-radius: 2px;
+      font-size:14px;
+      .topbutton
+        cursor pointer
+        width:60px;
+        height:30px;
+        margin-top:15px;
+        margin-right:0;
+        text-align:center;
+        padding: 0;
+        color: #000;
+        background: theme_bgcolor1
+        border: 1px solid #DCDEE2;
+      .hoverbutton
+        border: 1px solid theme_color_default;
+        color: theme_color_default
+/* 服务器主机（按操作系统分类统计） */
+.assetcontentfix
+  .assetServer
+    padding-right: 8px;
+    .card-line
+      background unset;
+      .s-card-header
+        background:theme_bgcolor1
+
+
+//资产发现和资产列表新扫描,子网扫描//Q4资产style
+#findAgainDialog,#monitorNewScanDialog,#subnetAgain
+  .table-block-title
+    font-weight:bold;
+    font-family: PingFang SC;
+    font-size: 14px;
+    margin:30px 0 20px 0;
+    opacity: 0.85;
+  .handlerPlus
+    border-radius: 12px;
+    color: #199FED;
+    border: 1px solid #199FED;
+    padding: 2px;
+    font-size: 10px;
+    cursor: pointer;
+  .listblock
+    position:relative;
+    list-style-type: none;
+    background: #f1f1f1;//0d467a
+    border-radius: 2px;
+    display: inline-block;
+    padding: 4px 18px 4px 5px;
+    margin: 0 5px 10px;
+    &:hover
+      background: #dbdbdb;//1675cb
+  .listblock i
+    position: absolute;
+    top: 0px;
+    right: 2px;
+    height: 100%;
+    line-height: 28px;
+    background: #dbdbdb;
+    cursor: pointer;
+
+/* 资产发现结果页面 */
+.resultScanFlag_title{
+  border-radius: 2px;
+  background: #F1F9F1;
+  font-size:16px;height:48px;
+  line-height:48px;
+  position:relative;
+  i{
+    position:absolute;
+    left: 10px;
+    font-size: 34px;
+    font-size:34px;
+    color:#16BD63
+  }
+  .font{
+    color: #16BD63;
+  }
+}
+
+
+
+/* 资产详情页面 */
+#assetsDetailConstructor {
+  width: 100%;
+  height: calc(100vh - 190px);
+  display: flex;
+  overflow-x: hidden;
+  .left_page {
+    width: 235px;
+    min-width: 235px;
+    height: 100%;
+    .left_top {
+      box-sizing: border-box;
+      position: relative;
+      line-height: 30px;
+      font-size: 16px;
+      padding: 10px 10px 10px 20px;
+      height: 170px;
+      background: linear-gradient(57.98deg, theme_iconcolor 0%, theme_iconcolor05 89.96%);
+      .left_title {
+        opacity: 0.45;
+      }
+      .left_title {
+        opacity: 0.85;
+      }
+      img {
+        position: absolute;
+        right: 10px;
+        top: 10px;
+      }
+    }
+    .left_bottom {
+      border-right: 1px solid #DCDEE2;
+      height: calc(100% - 170px);
+      .s-menu-vertical.s-menu-light:after {
+        width: 0px;
+        height: 100%;
+        top: 0;
+        right: 0;
+        z-index: 1;
+      }
+    }
+  }
+  .right_page {
+    width: calc(100% - 235px);
+    height: 100%;
+    .right_top {
+      height: 170px;
+      background: theme_bgcolor2
+      .s-carousel {
+        height: 100%;
+      }
+      .s-carousel-container {
+        height: 100%;
+      }
+      .asset_carousel {
+        padding: 30px 10px;
+        box-sizing: border-box;
+        height: 170px;
+        display: flex;
+        .column {
+          width: 33.3%;
+          flex-direction: column;
+          .asset-info {
+            height: 33.3%;
+            font-size: 14px;
+            .asset-title {
+              height: 100%;
+              text-overflow: ellipsis;
+              white-space: nowrap;
+              overflow: hidden;
+              padding-left: 30px;
+            }
+            .asset-value {
+              height: 100%;
+              display: -webkit-box;
+              -webkit-box-orient: vertical;
+              -webkit-line-clamp: 2;
+              overflow: hidden;
+              word-break: break-all;
+            }
+          }
+        }
+      }
+    }
+    .right_bottom {
+      height: calc(100% - 170px);
+    }
+  }
+}
+/* 资产添加/编辑 */
+#addAssetFormCtn{
+  .btn{
+    border-bottom: 10px solid #F5F7FA;
+  }
+}

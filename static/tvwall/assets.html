@@ -1,0 +1,300 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <script type="text/javascript" src="./js/jquery.js"></script>
+  <script type="text/javascript" src="./js/sea.js" id="seajsnode"></script>
+  <link rel="stylesheet" href="./css/tvwall.css" />
+  <script src="./js/countUp.js"></script>
+  <script src="./js/rotate.js"></script>
+</head>
+<body>
+<div class="content f-main staticTvwallAss">
+  <div class="half-top">
+  </div>
+  <div class="half-bottom"></div>
+</div>
+</body>
+<script type="text/javascript">
+  seajs.use(['./assets/js/assetsIndex'], function() {});
+  function settingPage(tvwallId, location) {
+    setAssets(tvwallId, location);
+  }
+</script>
+<script type="text/template" id="state-template">
+  <div class="i_item">
+    <div class="monitor-mod">
+        <div class="f-col icon"><img src="/<%=item.iconUrl%>"/></div>
+        <div class="f-col-fit">
+          <div><%= item.name %></div>
+          <div id="numHost"><%= item.total %>个</div>
+        </div>
+        <div class="battery-item <%=item.name%>">
+          <span class="battery-title">异常</span>
+          <li><span></span></li>
+          <li><span></span></li>
+          <li><span></span></li>
+          <li><span></span></li>
+          <li><span></span></li>
+          <li><span></span></li>
+          <li><span></span></li>
+          <li><span></span></li>
+          <li><span></span></li>
+          <li><span></span></li>
+          <div class="battery-num">0</div>
+        </div>
+        <div class="battery-item <%=item.name%>">
+          <span class="battery-title">告警</span>
+          <li><span></span></li>
+          <li><span></span></li>
+          <li><span></span></li>
+          <li><span></span></li>
+          <li><span></span></li>
+          <li><span></span></li>
+          <li><span></span></li>
+          <li><span></span></li>
+          <li><span></span></li>
+          <li><span></span></li>
+          <div class="battery-num">0</div>
+        </div>
+        <div class="battery-item <%=item.name%>">
+          <span class="battery-title">正常</span>
+          <li><span></span></li>
+          <li><span></span></li>
+          <li><span></span></li>
+          <li><span></span></li>
+          <li><span></span></li>
+          <li><span></span></li>
+          <li><span></span></li>
+          <li><span></span></li>
+          <li><span></span></li>
+          <li><span></span></li>
+          <div class="battery-num"><%= item.norm %></div>
+        </div>
+      </div>
+  </div>
+</script>
+<script type="text/template" id="device-template">
+  <div id="deviceMo">
+    <div class="subtitle">设备监控</div>
+    <div class="score-mod">
+      <div class="score-mod-l">
+        <div class="scan_wrapper">
+          <div class="scan_browse"></div>
+          <div class="scan_load"></div>
+          <div class="scan_arrows"></div>
+        </div>
+      </div>
+      <div class="score-mod-r">
+        <div class="score">
+          <div class="score-label">健康度评估:</div>
+          <div id="score"><span class="nohundred">0</span><span>0</span><span>0</span></div>
+          <div class="score-em">分</div>
+          <div class="clr"></div>
+        </div>
+        <div class='battery imgParent'>
+          <div class="img-scroll" id="imgscoll">
+              <span class="prev first"><i class="iconfont icon-left"></i></span>
+              <span class="next"><i class="iconfont icon-right"></i></span>
+              <div class="img-list">
+                <div class="i_list">
+                </div>
+              </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</script>
+<script type="text/template" id="ipDevice-template">
+  <div id="ipDeviceLeft">
+    <div class="f-in-col">
+      <div class="f-col-6">IP地址</div>
+      <div class="f-col-6">资产名称</div>
+      <div class="clr"></div>
+    </div>
+    <div id="ipDeviceList">
+      <div>
+        <%_.each(list, function(item, idx) {%>
+        <div class="f-in-col item <%if(idx == 0) {%>active<%}%>">
+          <div class="f-col-6"><%=item.deviceIp%></div>
+          <div class="f-col-6"><%=item.deviceName%></div>
+          <div class="arr"></div>
+          <div class="clr"></div>
+        </div>
+        <%});%>
+      </div>
+    </div>
+  </div>
+  <div id="ipDeviceRight"></div>
+</script>
+<script type="text/template" id="ipDeviceInfo-template">
+  <div>
+    <div id="devicePic" class="f-col">
+      <svg width="127" height="300">
+        <defs>
+          <linearGradient id="gradient" x1="0" y1="0" x2="0" y2="1">
+            <stop offset="0%"   stop-color="#fff" stop-opacity="0"/>
+            <stop offset="100%" stop-color="#fff" stop-opacity="1"/>
+          </linearGradient>
+          <mask id="mask">
+            <rect x="0" y="150" width="127" height="150" fill="url(#gradient)"  />
+          </mask>
+          <pattern id="reflect" patternUnits="userSpaceOnUse" width="127" height="150">
+            <image xlink:href="./img/devicePic.png" width="127" height="150" />
+          </pattern>
+        </defs>
+        <rect x="0" y="0" width="127" height="150" fill="url(#reflect)"></rect>
+        <rect x="0" y="150" width="127" height="150" fill="url(#reflect)" mask="url(#mask)" transform="scale(1, -1) translate(0 -450)"></rect>
+      </svg>
+    </div>
+    <div class="ip-device-box">
+      <div class="box-item">
+        <div><%=item.status%></div>
+        <div><div class="<%=item.className%>"></div></div>
+        <div>状态</div>
+      </div>
+      <div class="box-item">
+        <div><%=item.deviceType%></div>
+        <div><div class="type"></div></div>
+        <div>设备类型</div>
+      </div>
+      <div class="box-item">
+        <div><div class="pmd"><%=item.businessName%></div></div>
+        <div><div class="name"></div></div>
+        <div>资产名称</div>
+      </div>
+      <div class="box-item">
+        <div><div class="pmd"><%=item.location%></div></div>
+        <div><div class="position"></div></div>
+        <div>位置</div>
+      </div>
+      <div class="box-item">
+        <div><%=item.orgName%></div>
+        <div><div class="part"></div></div>
+        <div>配置管理员机构</div>
+      </div>
+      <div class="box-item">
+        <div><%=item.maintenanceUser%></div>
+        <div><div class="people"></div></div>
+        <div>配置管理员</div>
+      </div>
+      <div class="box-item">
+        <div><div class="pmd"><%=item.runTime%></div></div>
+        <div><div class="time"></div></div>
+        <div>运行时间</div>
+      </div>
+      <div class="box-item">
+        <div><%=item.unrecoveryIncidentNum%></div>
+        <div><div class="count"></div></div>
+        <div>未恢复事件数</div>
+      </div>
+      <div class="box-item">
+        <div><%=item.cpuUse%>%</div>
+        <div>
+          <div class="cpu">
+            <div class="circle">
+              <div class="gray"></div>
+              <div class="left">
+                <div></div>
+              </div>
+              <div class="right">
+                <div></div>
+              </div>
+              <div class="bg"></div>
+            </div>
+          </div>
+        </div>
+        <div>CPU使用率</div>
+      </div>
+      <div class="box-item">
+        <div><%=item.memoryUse%>%</div>
+        <div>
+          <div class="mem">
+            <div class="circle">
+              <div class="gray"></div>
+              <div class="left">
+                <div></div>
+              </div>
+              <div class="right"><div></div></div>
+              <div class="bg"></div>
+            </div>
+          </div>
+        </div>
+        <div>内存使用率</div>
+      </div>
+    </div>
+  </div>
+</script>
+<script type="text/template" id="assetsCfg-template">
+  <form id="assetsCfg">
+    <div class="f-in-col">
+      <div class="f-box">
+        <div class="f-box-body">
+          <div class="f-row odd-row">
+            <div class="f-col-5">
+              <div class="f-in-col">
+                <a class="notNull">*</a> 已关注资源切换时间
+              </div>
+            </div>
+            <div class="f-col-7">
+              <div class="f-in-col">
+                <input type="text" value="<%=time%>" checkType="isNull,numberScope" id="sliderVTime" minNum="10" maxNum="300" formTips="请输入10 ~ 300的正整数"/> 秒
+              </div>
+            </div>
+          </div>
+          <div class="f-row even-row">
+            <div class="f-col-5">
+              <div class="f-in-col">
+                缩放方式
+              </div>
+            </div>
+            <div class="f-col-7">
+              <div class="f-in-col">
+                <select name="scaleType" id="scaleType">
+                  <%if (scaletype == 0) {%>
+                  <option value="0" selected>铺满屏幕</option>
+                  <option value="1">保持比例</option>
+                  <option value="2">自定义设置</option>
+                  <%} else if (scaletype == 1) {%>
+                  <option value="0">铺满屏幕</option>
+                  <option value="1" selected>保持比例</option>
+                  <option value="2">自定义设置</option>
+                  <%} else {%>
+                  <option value="0">铺满屏幕</option>
+                  <option value="1">保持比例</option>
+                  <option value="2" selected>自定义设置</option>
+                  <%}%>
+                </select>
+              </div>
+            </div>
+          </div>
+          <div class="f-row odd-row zdy">
+            <div class="f-col-5">
+              <div class="f-in-col">
+                <a class="notNull">*</a> 水平缩放
+              </div>
+            </div>
+            <div class="f-col-7">
+              <div class="f-in-col">
+                <input type="text" value="<%=xbei%>" checkType="isNull" id="xBei" /> 倍
+              </div>
+            </div>
+          </div>
+          <div class="f-row even-row zdy">
+            <div class="f-col-5">
+              <div class="f-in-col">
+                <a class="notNull">*</a> 垂直缩放
+              </div>
+            </div>
+            <div class="f-col-7">
+              <div class="f-in-col">
+                <input type="text" value="<%=ybei%>" checkType="isNull" id="yBei" /> 倍
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </form>
+</script>
+</html>

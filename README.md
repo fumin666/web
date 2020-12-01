@@ -1,22 +1,28 @@
-#主目录
-> 每个目录下都有**readme**文件
+# suninfoplatformq
 
-<pre>
-├── build                      // 构建相关  
-├── config                     // 配置相关
-├── src                        // 源代码
-│   ├── assets                 // 主题 字体等静态资源
-│   ├── common                 // 全局公用方法
-│   ├── components             // 全局公用组件
-│   ├── filters                // 全局filter
-│   ├── home                   // 一级展示页面
-│   ├── pages                  // 二级页面单页
-│   ├── porlet                 // 主要是自定义模块文件，但项目页面也有引用的
-│   ├── plugins                // 全局插件
-│   ├── router                 // 路由
-│   ├── store                  // 全局store管理
-│   ├── styles                 // 全局样式
-│   ├── App.vue                // 入口页面
-│   └── main.js                // 入口 加载组件 初始化等
-├── static                     // 第三方不打包资源
-</pre>
+> A Vue.js project
+
+## Build Setup
+
+``` bash
+# install dependencies
+npm install
+
+# serve with hot reload at localhost:8080
+npm run dev
+
+# build for production with minification
+npm run build
+
+# build for production and view the bundle analyzer report
+npm run build --report
+
+# build for DllPlugin bundles
+npm run dll
+
+# build for theme style
+npm run theme
+```
+
+
+For detailed explanation on how things work, checkout the [guide](http://vuejs-templates.github.io/webpack/) and [docs for vue-loader](http://vuejs.github.io/vue-loader).

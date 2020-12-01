@@ -1,0 +1,376 @@
+<shapes>
+<shape name="cabinet" h="527" w="220">
+        <foreground>
+            <strokecolor color="#CEF60F"/>
+            <fillcolor color="none"/>
+            <rect x="0" y="0" w="220" h="527"/>
+            <fillstroke/>
+            <fillcolor color="none"/>
+            <rect x="0" y="0" w="220" h="20.98"/>
+            <fillstroke/>
+            <rect x="0" y="506" w="220" h="20.98"/>
+            <fillstroke/>
+            <rect x="0" y="20.98" w="9" h="485"/>
+            <fillstroke/>
+            <rect x="0" y="20.98" w="45" h="485"/>
+            <fillstroke/>
+            <rect x="211" y="20.98" w="9" h="485"/>
+            <fillstroke/>
+            <ellipse x="2.67" y="7.66" w="6" h="6"/>
+            <stroke/>
+            <fillcolor color="none"/>
+            <ellipse x="210" y="7.66" w="6" h="6"/>
+            <fillstroke/>
+            <ellipse x="2.67" y="512" w="6" h="6"/>
+            <fillstroke/>
+            <ellipse x="210" y="512" w="6" h="6"/>
+            <fillstroke/>
+        </foreground>
+</shape>
+	<shape name="router" h="14.7" w="160.9">
+        <foreground>
+            <strokecolor color="#CEF60F"/>
+            <fillcolor color="#222222"/>
+            <rect x="0" y="0" w="160.9" h="14.7"/>
+            <fillstroke/>
+            <fillcolor color="#333333"/>
+            <rect x="5.99" y="0" w="149.09" h="14.7"/>
+            <fillstroke/>
+            <rect x="8" y="2" w="116" h="6"/>
+            <stroke/>
+            <rect x="11" y="8" w="23" h="4"/>
+            <stroke/>
+            <rect x="40" y="8" w="23" h="4"/>
+            <stroke/>
+            <path>
+                <move x="37" y="2"/>
+                <line x="37" y="8"/>
+            </path>
+            <stroke/>
+            <path>
+                <move x="66" y="2"/>
+                <line x="66" y="8"/>
+            </path>
+            <stroke/>
+            <path>
+                <move x="95" y="2"/>
+                <line x="95" y="8"/>
+            </path>
+            <stroke/>
+            <rect x="128" y="2" w="5" h="4"/>
+            <stroke/>
+            <rect x="128" y="8" w="5" h="4"/>
+            <stroke/>
+            <rect x="135" y="8" w="5" h="4"/>
+            <stroke/>
+            <rect x="143" y="2" w="5" h="10"/>
+            <stroke/>
+        </foreground>
+    </shape>
+	<shape name="switch" h="14.7" w="160.9">
+        <foreground>
+            <strokecolor color="#CEF60F"/>
+            <fillcolor color="#222222"/>
+            <rect x="0" y="0" w="160.9" h="14.7"/>
+            <fillstroke/>
+            <fillcolor color="#333333"/>
+            <rect x="5.99" y="0" w="149.09" h="14.7"/>
+            <fillstroke/>
+            <rect x="140" y="2" w="6" h="3"/>
+            <stroke/>
+            <rect x="20" y="8" w="6" h="3"/>
+            <stroke/>
+            <rect x="125" y="2" w="6" h="3"/>
+            <stroke/>
+            <rect x="110" y="2" w="6" h="3"/>
+            <stroke/>
+            <rect x="95" y="2" w="6" h="3"/>
+            <stroke/>
+            <rect x="20" y="2" w="6" h="3"/>
+            <stroke/>
+            <rect x="35" y="2" w="6" h="3"/>
+            <stroke/>
+            <rect x="50" y="2" w="6" h="3"/>
+            <stroke/>
+            <rect x="65" y="2" w="6" h="3"/>
+            <stroke/>
+            <rect x="35" y="8" w="6" h="3"/>
+            <stroke/>
+            <rect x="50" y="8" w="6" h="3"/>
+            <stroke/>
+            <rect x="65" y="8" w="6" h="3"/>
+            <stroke/>
+            <rect x="95" y="8" w="6" h="3"/>
+            <stroke/>
+            <rect x="110" y="8" w="6" h="3"/>
+            <stroke/>
+            <rect x="125" y="8" w="6" h="3"/>
+            <stroke/>
+            <rect x="140" y="8" w="6" h="3"/>
+            <stroke/>
+            <fillcolor color="#333333"/>
+            <roundrect x="12.5" y="2" w="6" h="10" arcsize="26.68"/>
+            <fill/>
+            <roundrect x="27.5" y="2" w="6" h="10" arcsize="26.68"/>
+            <fill/>
+            <roundrect x="42.5" y="2" w="6" h="10" arcsize="26.68"/>
+            <fill/>
+            <roundrect x="57.5" y="2" w="6" h="10" arcsize="26.68"/>
+            <fill/>
+            <roundrect x="102.5" y="2" w="6" h="10" arcsize="26.68"/>
+            <fill/>
+            <roundrect x="117.5" y="2" w="6" h="10" arcsize="26.68"/>
+            <fill/>
+            <roundrect x="132.5" y="2" w="6" h="10" arcsize="26.68"/>
+            <fill/>
+            <roundrect x="147.5" y="2" w="6" h="10" arcsize="26.68"/>
+            <fill/>
+            <roundrect x="72.5" y="2" w="21" h="10" arcsize="14.76"/>
+            <fill/>
+        </foreground>
+    </shape>
+	<shape name="firewall" h="20" w="160.8">
+        <foreground>
+            <strokecolor color="#CEF60F"/>
+            <fillcolor color="#CEF60F"/>
+            <rect x="0" y="0" w="160.8" h="20"/>
+            <fill/>
+            <fillcolor color="#545454"/>
+            <ellipse x="2" y="4.5" w="3.34" h="3.34"/>
+            <fill/>
+            <ellipse x="2" y="12.35" w="3.34" h="3.34"/>
+            <fill/>
+            <ellipse x="154.93" y="4.5" w="3.34" h="3.34"/>
+            <fill/>
+            <ellipse x="154.93" y="12.35" w="3.34" h="3.34"/>
+            <fill/>
+            <fillcolor color="#333333"/>
+            <roundrect x="8.66" y="2.34" w="143.27" h="15.02" arcsize="8.914"/>
+            <fill/>
+        </foreground>
+    </shape>
+	<shape name="server" h="15.7" w="160.9">
+        <foreground>
+            <strokecolor color="#CEF60F"/>
+            <fillcolor color="#222222"/>
+            <rect x="0" y="0" w="160.9" h="15.7"/>
+            <fillstroke/>
+            <fillcolor color="#333333"/>
+            <rect x="5.99" y="0" w="149.09" h="15.7"/>
+            <fillstroke/>
+            <rect x="8" y="9" w="26" h="4"/>
+            <stroke/>
+            <rect x="37" y="9" w="26" h="4"/>
+            <stroke/>
+            <rect x="66" y="9" w="26" h="4"/>
+            <stroke/>
+            <rect x="95" y="9" w="26" h="4"/>
+            <stroke/>
+            <rect x="124" y="9" w="26" h="4"/>
+            <stroke/>
+            <rect x="66" y="2" w="26" h="4"/>
+            <stroke/>
+            <rect x="95" y="2" w="26" h="4"/>
+            <stroke/>
+            <rect x="124" y="2" w="26" h="4"/>
+            <stroke/>
+            <rect x="8" y="2" w="55" h="4"/>
+            <stroke/>
+        </foreground>
+    </shape>
+	<shape name="diskarray" h="29.6" w="160.9">
+        <foreground>
+            <strokecolor color="#CEF60F"/>
+            <fillcolor color="#222222"/>
+            <rect x="0" y="0" w="160.9" h="29.6"/>
+            <fillstroke/>
+            <fillcolor color="#333333"/>
+            <rect x="6" y="0" w="149" h="29.6"/>
+            <fillstroke/>
+            <rect x="10" y="2" w="5" h="26"/>
+            <stroke/>
+            <rect x="17" y="2" w="5" h="26"/>
+            <stroke/>
+            <rect x="24" y="2" w="5" h="26"/>
+            <stroke/>
+            <rect x="31" y="2" w="5" h="26"/>
+            <stroke/>
+            <rect x="69" y="2" w="5" h="26"/>
+            <stroke/>
+            <rect x="48" y="2" w="5" h="26"/>
+            <stroke/>
+            <rect x="55" y="2" w="5" h="26"/>
+            <stroke/>
+            <rect x="62" y="2" w="5" h="26"/>
+            <stroke/>
+            <rect x="100" y="2" w="5" h="26"/>
+            <stroke/>
+            <rect x="107" y="2" w="5" h="26"/>
+            <stroke/>
+            <rect x="86" y="2" w="5" h="26"/>
+            <stroke/>
+            <rect x="93" y="2" w="5" h="26"/>
+            <stroke/>
+            <rect x="131" y="2" w="5" h="26"/>
+            <stroke/>
+            <rect x="138" y="2" w="5" h="26"/>
+            <stroke/>
+            <rect x="145" y="2" w="5" h="26"/>
+            <stroke/>
+            <rect x="124" y="2" w="5" h="26"/>
+            <stroke/>
+            <fillcolor color="#111111"/>
+            <rect x="38" y="2" w="8" h="12"/>
+            <fill/>
+            <rect x="38" y="15" w="8" h="12"/>
+            <fill/>
+            <rect x="114" y="2" w="8" h="12"/>
+            <fill/>
+            <rect x="114" y="15" w="8" h="12"/>
+            <fill/>
+            <strokecolor color="#CEF60F"/>
+            <path>
+                <move x="76" y="0"/>
+                <line x="76" y="29.6"/>
+                <move x="84" y="0"/>
+                <line x="84" y="29.6"/>
+            </path>
+            <stroke/>
+        </foreground>
+    </shape>
+
+	<shape name="bladecenter" h="42.5" w="160.9">
+        <foreground>
+            <strokecolor color="#CEF60F"/>
+            <fillcolor color="#333333"/>
+            <path>
+                <move x="0" y="10"/>
+                <line x="0" y="0"/>
+                <line x="160.9" y="0"/>
+                <line x="160.9" y="10"/>
+                <line x="152.9" y="9.8"/>
+                <line x="152.9" y="34.4"/>
+                <line x="160.9" y="34.4"/>
+                <line x="160.9" y="42.4"/>
+                <line x="0" y="42.4"/>
+                <line x="0" y="34.4"/>
+                <line x="8" y="34.4"/>
+                <line x="8" y="10"/>
+                <close/>
+            </path>
+            <fillstroke/>
+            
+            <rect x="17" y="5" w="5" h="32"/>
+            <stroke/>
+            <rect x="24" y="5" w="5" h="32"/>
+            <stroke/>
+            <rect x="31" y="5" w="5" h="32"/>
+            <stroke/>
+            
+            <rect x="48" y="5" w="5" h="32"/>
+            <stroke/>
+            <rect x="55" y="5" w="5" h="32"/>
+            <stroke/>
+            <rect x="62" y="5" w="5" h="32"/>
+            <stroke/>
+            <rect x="69" y="5" w="5" h="32"/>
+            <stroke/>
+            
+            <rect x="85" y="5" w="5" h="32"/>
+            <stroke/>
+            <rect x="93" y="5" w="5" h="32"/>
+            <stroke/>
+            <rect x="100" y="5" w="5" h="32"/>
+            <stroke/>
+            <rect x="107" y="5" w="5" h="32"/>
+            <stroke/>
+            
+            <rect x="124" y="5" w="5" h="32"/>
+            <stroke/>
+            <rect x="131" y="5" w="5" h="32"/>
+            <stroke/>
+            <rect x="138" y="5" w="5" h="32"/>
+            <stroke/>
+            
+        </foreground>
+    </shape>
+	<shape name="bladeserver" h="120" w="160.9">
+        <foreground>
+            <strokecolor color="#CEF60F"/>
+            <fillcolor color="#222222"/>
+            <rect x="0" y="0" w="18.5" h="120"/>
+            <fillstroke/>
+            <rect x="3" y="2" w="5" h="27"/>
+            <stroke/>
+            <fillcolor color="#333333"/>
+            <roundrect x="2" y="32" w="14.5" h="27" arcsize="15.9"/>
+            <fill/>
+            <strokecolor color="#CEF60F"/>
+            <rect x="11" y="2" w="5" h="27"/>
+            <stroke/>
+            <fillcolor color="#333333"/>
+            <roundrect x="2" y="61" w="14.5" h="27" arcsize="15.9"/>
+            <fill/>
+            <strokecolor color="#CEF60F"/>
+            <rect x="3" y="91" w="5" h="27"/>
+            <stroke/>
+            <rect x="11" y="91" w="5" h="27"/>
+            <stroke/>
+        </foreground>
+    </shape>
+    <shape name="pcserver" h="153.25" w="160.9">
+        <foreground>
+            <strokecolor color="#CEF60F"/>
+            <fillcolor color="#333333"/>
+            <rect x="0" y="0" w="73.25" h="149.92"/>
+            <fillstroke/>
+            <rect x="3.33" y="149.92" w="66.59" h="3.33"/>
+            <fillstroke/>
+            <fillcolor color="#111111"/>
+            <rect x="4.33" y="1.5" w="63.26" h="146.25"/>
+            <fill/>
+            <strokecolor color="#CEF60F"/>
+            <fillcolor color="#333333"/>
+            <rect x="23.64" y="3.33" w="24.31" h="1"/>
+            <fillstroke/>
+            <rect x="5.83" y="6.66" w="59.93" h="11.66"/>
+            <fillstroke/>
+            <rect x="3.33" y="19.99" w="66.59" h="5"/>
+            <fill/>
+            <rect x="2" y="59.97" w="67.92" h="5"/>
+            <fill/>
+            <rect x="8.32" y="29.98" w="54.94" h="5"/>
+            <fill/>
+            <rect x="8.32" y="39.98" w="54.94" h="5"/>
+            <fill/>
+            <strokecolor color="#CEF60F"/>
+            <rect x="6.66" y="68.3" w="58.27" h="76.63"/>
+            <fillstroke/>
+            <rect x="8.32" y="49.97" w="54.94" h="5"/>
+            <fill/>
+        </foreground>
+	</shape>
+	<shape name="keyboard" h="20" w="160.9">
+        <foreground>
+            <strokecolor color="#CEF60F"/>
+            <fillcolor color="#222222"/>
+            <rect x="0" y="0" w="160.9" h="19.6"/>
+            <fillstroke/>
+            <fillcolor color="#333333"/>
+            <rect x="6" y="0" w="149" h="19.6"/>
+            <fillstroke/>
+        </foreground>
+    </shape>
+	<shape name="display" h="105" w="142">
+        <background><strokecolor color="#CEF60F"/><fillcolor color="#333333"/><path><move x="20" y="99"/><line x="43.5" y="80"/><line x="93.5" y="80"/><line x="117" y="99"/><close/></path></background>
+		<foreground>
+			<fillstroke color="#222222"/>
+			<fillcolor color="#333333"/>
+			<rect x="0" y="0" w="140" h="90" />
+			<fillstroke/>
+			<fillcolor color="#111111"/>
+			<rect x="7" y="5" w="126" h="80"/>
+			<fillstroke/>
+		</foreground>
+    </shape>
+</shapes>

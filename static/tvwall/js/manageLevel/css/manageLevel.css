@@ -1,0 +1,63 @@
+.manageLevel,.businessLevel
+{
+    height: 24px;
+    line-height: 24px;
+}
+.manageLevel:after,.businessLevel:after
+{
+    display:table;
+    content:'';
+    clear:both;
+}
+.manageLevel>li,.businessLevel>li
+{
+    min-width: 32px;
+    height: 12px;
+    padding:0 2px;
+    line-height: 12px;
+    margin-left: 1px;
+    text-indent: -5000px;
+    text-align: center;
+    font-weight: bold;
+    font-size: 14px;
+    list-style:none;
+    opacity:0.5;
+    display:inline-block;
+}
+.manageLevel>li:first-child,.businessLevel>li:first-child
+{
+    background-color:  #fa5d53;
+    margin-left: 0;
+    border-radius:2px 0 0 2px;
+}
+.manageLevel>li:nth-child(2),.businessLevel>li:nth-child(2)
+{
+    background-color: #fe9948;
+}
+.manageLevel>li:nth-child(3)
+{
+    background-color: #fdc847;
+}
+.manageLevel>li:nth-child(4),.businessLevel>li:nth-child(3)
+{
+    background-color: #97cb2c;
+}
+.manageLevel>li:nth-child(5),.businessLevel>li:nth-child(4)
+{
+    background-color: #44caff;
+    border-radius:0 2px 2px 0;
+}
+.manageLevel>li.manageLevel-current,.businessLevel>li.businessLevel-current
+{
+    height: 24px;
+    line-height: 24px;
+    margin-left: 0;
+    text-indent:0;
+    color:#fff;
+    border-radius:3px;
+    opacity: 1;
+}
+.manageLevel>li.manageLevel-current+li,.businessLevel>li.businessLevel-current+li
+{
+    margin-left: 0;
+}
